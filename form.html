@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Job Application Form</title>
+</head>
+
+<body>
+    <FORM METHOD="post" ACTION="mailto:wisha.jamil13@gmail.com">
+        <h1> IFixPC Job Application Form </h1>
+        <hr><br>
+
+        Postion Applied to: <input type="text" name="position" autofocus>
+        Job reference code: <input type="text" name="referenceCode" size="20"><br>
+        <br><hr><br>
+        
+        First Name: <input type="text" name="fname" size="40"><br><br>
+        Family Name: <input type="text" name="lname" size="40"><br><br>
+        Nationality: <input type="text" name="nationality" size="40"><br><br>
+        Date of Birth: <input type="text" name="dob" size="40"><br><br>
+        Address: <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
+        Telephone: <input type="text" name="telephone" size="40" required>
+        Email: <input type="text" name="email" size="40" required><br>
+        <br><hr>
+        
+        <h3>Educational History and Qualifications</h3>
+        <p>School/College, Course Studied, Qualifications Received, Grades:</p>
+        <textarea id="address" name="address" rows="4" cols="50"></textarea><br>
+
+        <h3>Employment History</h3>
+        <p> Employer, Date, Position/responsibilities: </p>
+        <textarea id="address" name="address" rows="4" cols="50"></textarea><br>
+        <p> Years of Work Experience: </p>
+        <input type="range" name="experienceInput" id="experienceInput" min="0" max="10" oninput="experienceOutput.value = experienceInput.value">
+        <output name="experienceOutput" id="experienceOutput"></output>
+
+        <h3>Personal Statement:</h3>
+        <textarea id="address" name="address" rows="4" cols="50"></textarea><br>
+        <br><hr>
+
+        <h3>First Referee Details</h3>
+        First Name: <input type="text" name="fname" size="40">
+        Family Name: <input type="text" name="lname" size="40">
+        Title: <input type="text" name="nationality" size="40"><br><br>
+        Relationship: <input type="text" name="dob" size="40"><br><br>
+        Occupation: <input type="text" name="dob" size="40"><br><br>
+        Address: <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
+        Telephone: <input type="text" name="telephone" size="40" required>
+        Email: <input type="text" name="email" size="40" required><br><br>
+
+        <h3>Second Referee Details</h3>
+        First Name: <input type="text" name="fname" size="40">
+        Family Name: <input type="text" name="lname" size="40">
+        Title: <input type="text" name="nationality" size="40"><br><br>
+        Relationship: <input type="text" name="dob" size="40"><br><br>
+        Occupation: <input type="text" name="dob" size="40"><br><br>
+        Address: <textarea id="address" name="address" rows="4" cols="50" autofocus></textarea><br><br>
+        Telephone: <input type="text" name="telephone" size="40" required>
+        Email: <input type="text" name="email" size="40" required><br>
+        <br><hr><br>
+
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">  
+    </FORM>
+</body>
+</html>

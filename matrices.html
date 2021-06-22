@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> Multiplication of square matrices </title>
+</head>
+
+<body>
+<script>
+    function multiplyMatrix(a1, b1) {
+        var final_ans = [];
+        for (var i = 0; i < a1.length; i++) {
+            final_ans[i] = [];
+            for (var j = 0; j < b1[0].length; j++) {
+                var sum = 0;
+                    for (var k = 0; k < a1[0].length; k++) {
+                        sum += a1[i][k] * b1[k][j];
+                    }
+                final_ans[i][j] = sum;
+            }
+        }
+        return final_ans;
+    }
+
+    function display(m) {
+        for (var r = 0; r < m.length; ++r) {
+            document.write('&nbsp;&nbsp;'+m[r].join(' ')+'<br />');
+        }
+    }
+
+    var a = [[1, 2, 3], [3, 2, 1], [0, 1, 4]],
+        b = [[2, 4, 6], [3, 6, 9] , [4, 5, 6]];
+    
+    document.write('matrix A: <br/>');
+    display(a);
+
+    document.write('matrix B: <br/>');
+    display(b);
+
+    document.write('3x3 square matrices multiplication: <br/>');
+    display(multiplyMatrix(a, b));
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> fibonacci </title>
+</head>
+
+<body>
+<script>
+    var number = prompt("Enter a number: ");
+    var num1=0;
+    var num2=1;
+
+    document.write("The fibonacci series : ");
+    document.write("",num1," ");
+    document.write("",num2," ");
+ 
+    var i,num3;
+    for(i=2; i<number; i++)
+    {
+	    num3=num1+num2;
+	    document.write("",num3," ");
+	    num1=num2;
+	    num2=num3;
+    }
+</script>
+</body>
+</html>

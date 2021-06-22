@@ -1,0 +1,285 @@
+body, html {
+    background-color: #E3E3E3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Lato", sans-serif !important;
+	font-weight: 900 !important;
+}
+
+.wrapper {
+    background: #E3E3E3;
+}
+
+#about .details {
+    margin-top: 2em;
+}
+
+#about h2 {
+    color: #646464;
+    font-size: 3.5em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.typewriter{
+    background: #E3E3E3; 
+    padding: 10px;
+    max-width: 340px;
+}
+
+@keyframes letters {
+    from {
+      left: 0;
+    }
+    to {
+      left: 50ch;
+    }
+  }
+
+@keyframes lines {
+    from {
+      top: 0;
+    }
+    to {
+      top: 100%;
+    }
+  }
+
+@keyframes cursor-type {
+    50% {
+      border-color: #000;
+    }
+  }
+
+@keyframes cursor-wait {
+    0% {
+      box-shadow: inset 2px 0 0 0 rgba(0, 0, 0, 0);
+    }
+    1% {
+      box-shadow: inset 2px 0 0 0 black;
+    }
+    40% {
+      box-shadow: inset 2px 0 0 0 black;
+    }
+  }
+
+  .type {
+    position: relative;
+    font-family: monospace;
+    width: 50ch;
+    word-break: break-all;
+    overflow: hidden;
+    left: 125%;
+    transform: translateX(-25%);
+    font-size: 1.9em;
+    color: whitesmoke;
+    background-color: rgb(200, 65, 13);
+    text-align: center;
+  }
+
+  @supports (width: 3ch) {
+    .type:before, .type:after {
+      box-sizing: border-box;
+      content: '';
+      position: absolute;
+      z-index: 1;
+      display: block;
+      height: 1.2em;
+      width: 100%;
+      background-color:#E3E3E3;
+    }
+    .type:before {
+      border-left: 2px solid transparent;
+      top: 100%;
+      animation-name: letters, lines, cursor-type, cursor-wait;
+      animation-fill-mode: both, both, both, backwards;
+    }
+    .type:after {
+      content: '';
+      height: 100%;
+      top: 100%;
+      left: 0;
+      margin-top: 1.2em;
+    }
+  }
+
+  .type:before {
+    animation-duration: 1.4285714286s, 1.4285714286s, 0.0285714286s, 0.8s;
+    animation-timing-function: steps(50, end), steps(1, end), step-end, ease-out;
+    animation-iteration-count: 1, 1, 35, 2;
+    animation-delay: 1.6s, 1.6s, 1.6s, 0s;
+  }
+
+  .type:after {
+    animation: lines 1.4285714286s steps(1, end) 1;
+    animation-fill-mode: both;
+    animation-delay: 1.6s;
+  }
+
+  .tab-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    list-style: none;
+    background-color: #fff;
+    margin: 40px 0;
+  }
+
+  .tab-wrap:hover {
+    box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
+  }
+  
+  .tab {
+    display: none;
+  }
+
+  .tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1) {
+    opacity: 1;
+    position: relative;
+    z-index: 100;
+  }
+
+  .tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2) {
+    opacity: 1;
+    position: relative;
+    z-index: 100;
+  }
+
+  .tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3) {
+    opacity: 1;
+    position: relative;
+    z-index: 100;
+  }
+ 
+  .tab + label {
+    flex-grow: 3;
+    text-align: center;
+    background-color: #E3E3E3;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+
+  .tab + label:hover {
+    background-color:  rgb(200, 65, 13);
+    cursor: pointer
+  }
+
+  .tab__content {
+    padding: 10px 25px;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 6px;
+  }
+
+#home img {
+    float: right;
+    border-radius: 8px;
+    height: 50%;
+    width:20%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+    text-align: center  
+  }
+  tr:nth-child(even){background-color: #f2f2f2
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+a {
+    color: #323232;
+    text-decoration: none;
+ }
+  
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+#intro, #job, #education, #course, #skill, #relatedLinks {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 24px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+#relatedLinks {
+    border-bottom: none;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.my-name {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.my-title {
+    font-size: 24px;
+    font-weight: 300;
+}
+   
+.links {
+    flex-direction: column;
+    margin: 10px 0 20px 0;
+}
+  
+.link-item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.job {
+    margin-bottom: 24px;
+}
+  
+.job:last-child {
+    border-bottom: none;
+}
+  
+.job-title-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+  
+.job-company {
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 24px;
+}
+  
+.skills-container ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}

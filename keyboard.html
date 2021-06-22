@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Simple virtual keyboard </title>
+</head>
+    
+<body>
+    <h1>A simple virtual keyboard </h1>
+    
+    <input type="button" value="A" onclick="myFunction(this)">
+    <input type="button" value="B" onclick="myFunction(this)">
+    <input type="button" value="C" onclick="myFunction(this)">
+    <input type="button" value="D" onclick="myFunction(this)">
+    <input type="button" value="E" onclick="myFunction(this)">
+    <input type="button" value="F" onclick="myFunction(this)">
+    <input type="button" value="G" onclick="myFunction(this)">
+    <input type="button" value="H" onclick="myFunction(this)">
+    <input type="button" value="space" onclick="myFunction(this)">
+
+    <h3 id="virtualKeys"></h3>
+
+    <script>
+        function myFunction(word) {
+            if(word.value == "space") {
+                document.getElementById("virtualKeys").innerHTML = document.getElementById("virtualKeys").innerHTML + " "
+            } else {
+                document.getElementById("virtualKeys").innerHTML = document.getElementById("virtualKeys").innerHTML + word.value
+            }
+        }
+    </script>
+
+</body>
+</html>

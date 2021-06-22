@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> build a table form array  </title>
+</head>
+    
+<body>
+    <h1> Array to Table </h1>
+
+    <script>
+	    var students = [
+            { name: "Andy", id: 001, major: "Computer Science" },
+            { name: "Ben", id: 002, major: "Biology" },
+            { name: "Hari", id: 003, major: "Computer Science" },
+            { name: "Lisa", id: 004, major: "Physic" },
+            { name: "Wendy", id: 005, major: "Math" }
+        ];	
+
+        document.write("<table border='1'>");	
+        document.write("<tr>");		
+	    document.write("<th>" + "ID" + "</th>");	
+        document.write("<th>" + "Name" + "</th>");		
+	    document.write("<th>" + "Major" + "</th>");		
+        document.write("</tr>");		
+        
+        for(var i = 0; i < students.length; i++) {
+            document.write("<tr>");		
+	        document.write("<td>" + students[i].id + "</td>");	
+            document.write("<td>" + students[i].name + "</td>");	
+            document.write("<td>" + students[i].major + "</td>");		
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Authentication Checking Application </title>
+</head>
+    
+<body>
+    <h1> Log in </h1>
+
+    Username <input id="usr"> <br><br>
+    Password <input type="password" id="passwd"> <br><br>
+
+    <button onclick="authentication()">Log in</button>
+
+    <script>
+        function authentication() {
+	        var username = ["user1", "user2", "user3"]
+            var password = ["user1-111", "user2-222", "user3-333"]	
+
+            var usr = document.getElementById('usr').value;
+            var passwd = document.getElementById('passwd').value;
+		       
+            var usrStatus=0;
+            var passwdStatus=0;
+
+            for(var i=0; i<3; i++){
+                if(username[i] == usr){
+                    usrStatus=1;
+                }
+                if(password[i] == passwd && username[i] == usr){
+                    passwdStatus=1;
+                }
+            }
+
+            if(usrStatus==0) {
+                alert("The username does not exist");
+            } else if (passwdStatus==0){
+                alert("Incorrect password");
+            } else {
+                alert("Successfully logged in");
+            }
+        }
+    </script>
+</body>
+</html>

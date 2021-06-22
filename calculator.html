@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <h1>A very simple Calculator</h1>
+    Number 1 <input id="num1"><br>
+    Number 2 <input id="num2"><br>
+    Result : <p id="result"></p>
+
+    <button onclick="add()">Add</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="quotient()">Quotient</button>
+
+    <script>
+        function add() {
+            document.getElementById("result").innerHTML = 
+                parseFloat(document.getElementById("num1").value) + parseFloat(document.getElementById("num2").value);
+        }
+
+        function subtract() {
+            document.getElementById("result").innerHTML = 
+                parseFloat(document.getElementById("num1").value) - parseFloat(document.getElementById("num2").value);
+        }
+
+        function multiply() {
+            document.getElementById("result").innerHTML = 
+                parseFloat(document.getElementById("num1").value) * parseFloat(document.getElementById("num2").value);
+        }
+
+        function quotient() {
+            document.getElementById("result").innerHTML = 
+                parseFloat(document.getElementById("num1").value) / parseFloat(document.getElementById("num2").value);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> check out cart </title>
+</head>
+    
+<body>
+    <h1> Check which items you want to buy </h1>
+    
+    <input type="checkbox" name="food" value="Millk" >Milk<br>
+    <input type="checkbox" name="food" value="Bread">Bread<br>
+    <input type="checkbox" name="food" value="Soda">Soda<br>
+    <input type="checkbox" name="food" value="Eggs">Eggs<br>
+    <input type="checkbox" name="food" value="Pasta">Pasta<br><br>
+    <input type="button" value="Check items" onclick="checkedItemsList()">
+
+    <script>
+		function checkedItemsList() {
+			var list = document.getElementsByName('food');
+			var checkedItems = " ";
+			for(var i = 0; i < list.length; i++) 
+            {
+				if(list[i].type == 'checkbox' && list[i].checked == true)
+                    checkedItems += list[i].value + ", ";
+			}
+			alert(checkedItems + "are in your cart");
+		}			
+    </script>
+    
+</body>
+</html>

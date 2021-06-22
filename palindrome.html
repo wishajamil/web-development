@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> isPalindrome </title>
+</head>
+
+<body>
+<script>
+
+    var word = prompt("Enter a string: ");
+    document.write(palindrome(word));
+
+    function palindrome(str) {
+        var new_string = str.toLowerCase()
+        var len = new_string.length;
+        var mid = Math.floor(len/2);
+
+        for ( var i = 0; i < mid; i++ ) {
+            if (new_string[i] !== new_string[len - 1 - i]) {
+                return " string is not a palindrome";
+            }
+        }
+        return "String is a palindrome";
+    }
+      
+</script>
+</body>
+</html>
